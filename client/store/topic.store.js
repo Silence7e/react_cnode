@@ -63,7 +63,7 @@ class TopicStore {
 
   @action fetchTopics(tab) {
     return new Promise((resolve, reject) => {
-      if (tab === this.tab || this.topics.length > 0) {
+      if (tab === this.tab && this.topics.length > 0) {
         resolve();
         return;
       }
